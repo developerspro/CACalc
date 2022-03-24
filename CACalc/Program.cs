@@ -17,6 +17,7 @@ namespace CACalc
 
             do
             {
+                Console.Clear();
                 Console.WriteLine("Digite um valor");
                 valor1 = double.Parse(Console.ReadLine());
                 Console.WriteLine("Escolha uma operação:");
@@ -28,12 +29,15 @@ namespace CACalc
                 {
                     case "+":
                         resultado = valor1 + valor2;
+                        Console.WriteLine("Resultado:"+resultado);
                         break;
                     case "-":
-                        resultado = valor1 - valor2; 
+                        resultado = valor1 - valor2;
+                        Console.WriteLine("Resultado:" +resultado);
                         break;
                     case "*":
                         resultado = valor1 * valor2;
+                        Console.WriteLine("Resultado:" + resultado);
                         break;
                     case "/":
                         while (valor2==0)
@@ -43,13 +47,14 @@ namespace CACalc
 
                         }
                         resultado = valor1 / valor2;
+                        Console.WriteLine("Resultado:" +);
                         break;
 
                     default:
                         Console.WriteLine("Opcao invalida");
                         break;
                 }
-                Console.WriteLine("Deseja fazer uma nova operação:");
+                Console.WriteLine("Deseja sair:");
                 op = Console.ReadLine();
             } while (!op.ToUpper().Equals("S"));
 
